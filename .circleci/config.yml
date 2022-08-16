@@ -6,8 +6,8 @@ orbs:
 
 jobs:
   build:
-    docker:
-      - image: cimg/ruby:2.7-node
+    machine: true
+    resource_class: runner-egrapp/support-demo
     steps:
       - checkout
       - ruby/install-deps
