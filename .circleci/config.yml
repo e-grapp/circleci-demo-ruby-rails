@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  ruby: circleci/ruby@1.1.0
+  # ruby: circleci/ruby@1.1.0
   node: circleci/node@2
 
 jobs:
@@ -10,7 +10,8 @@ jobs:
     resource_class: runner-egrapp/support-demo
     steps:
       - checkout
-      - ruby/install-deps
+      - run: sudo apt install ruby
+      #- ruby/install-deps
       # Store bundle cache
       - node/install-packages:
           pkg-manager: yarn
