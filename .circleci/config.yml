@@ -9,6 +9,7 @@ jobs:
       # Whatever you want to do
       - run: sudo apt-get update 
       - run: sudo apt install ruby-full
+      - run: ruby --version
 
 
 workflows:
